@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,30 +9,91 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #c4baba;
+            background: #295e5e;
             color: #fff;
             text-align: center;
             padding: 50px 20px;
         }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0px #ff0d00;
+            }
+
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px #10100f;
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0px #ffcc00;
+            }
+        }
+
         img.logo {
             width: 300px;
             height: 200px;
             margin-bottom: 20px;
+            animation: pulse 2s infinite;
+            border-radius: 12px;
+            /* optional */
         }
+
         h1 {
             font-size: 48px;
             margin-bottom: 10px;
             color: #ffcc00;
+            font-family: 'Times New Roman', Times, serif;
         }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2,
+        p {
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        /* Stagger the animation for p so it appears slightly after h2 */
         h2 {
+            animation-delay: 0.2s;
             font-size: 24px;
             margin-bottom: 20px;
         }
+
         p {
             font-size: 18px;
             margin-bottom: 40px;
             line-height: 1.6;
+            animation-delay: 0.6s;
         }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
         .btn {
             display: inline-block;
             margin: 10px;
@@ -42,38 +104,45 @@
             border: none;
             border-radius: 8px;
             text-decoration: none;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            animation: pulse 1.5s infinite;
         }
+
         .btn:hover {
             background-color: #e23336;
+            transform: scale(1.08);
         }
+
         .whatsapp {
             background-color: #25d366;
         }
+
         .whatsapp:hover {
             background-color: #1da851;
         }
     </style>
 </head>
+
 <body>
 
     <!-- 🔥 Logo at the top -->
     <img src="sethmatka.png" alt="Seth Matka Logo" class="logo" />
 
     <h1>Seth Matka</h1>
-    <h2>Welcome to Seth Matka</h2>
+    <a href="sethmatka.apk" download>
+        <button class="btn">DOWNLOAD APK</button>
+    </a>
+    <h2>Welcome To Seth Matka</h2>
     <p>
         Seth Matka is your go-to app for real-time Matka results and historical charts. Stay updated, win smart!
         <br><br>
         Download the app now or connect with us on WhatsApp for support and tips.
     </p>
 
-    <a href="https://wa.me/919664361536" class="btn whatsapp" target="_blank">Contact on WhatsApp</a>
-    <a href="sethmatka.apk" download>
-  <button class="btn">Download APK</button>
-</a>
+    <a href="https://wa.me/918094776055" class="btn whatsapp" target="_blank">Contact on WhatsApp</a>
 
+    <h1>Thank You!</h1>
 
 </body>
-</html>
 
+</html>

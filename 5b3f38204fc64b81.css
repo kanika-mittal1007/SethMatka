@@ -887,7 +887,6 @@ img,video {
 .header {
     width: 90%;
     height: 60vh;
-    background: url(../../../newhero.png) bottom no-repeat;
     background-size: 300pt;
     position: relative;
     padding-top: 20px;
